@@ -55,12 +55,12 @@
 			<div class="row">
 			<h4><strong>Customer Comments&nbsp;&nbsp;&nbsp;&nbsp;</strong> <small>Sort by:</small> <input type="text" ng-model="in"></h4>
 				</div>
-				
+
 				<ul class="media-list  tab-pane fade in active">
 				<li class="media"
 							ng-repeat="comment in dish.comments | orderBy:in">
-				
-				
+
+
 				<blockquote>
 					<p>{{comment.rating}} Stars</p>
 					<p>{{comment.comment}}</p>
