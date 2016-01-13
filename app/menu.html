@@ -9,6 +9,7 @@
          content must come *after* these tags -->
 <title>Ristorante Con Fusion: Menu</title>
 <!-- Bootstrap -->
+<!-- build:css styles/main.css -->
 <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <link
@@ -18,6 +19,7 @@
 	rel="stylesheet">
 <link href="styles/bootstrap-social.css" rel="stylesheet">
 <link href="styles/mystyles.css" rel="stylesheet">
+<!-- endbuild -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,81 +75,11 @@
 		</div>
 	</div>
 
+<!-- build:js scripts/main.js -->
 	<script src="../bower_components/angular/angular.min.js"></script>
 
-	<script> 
-	<!-- module -->
-var app = angular.module('confusionApp', []);
-	<!-- controller -->
-	app.controller('menuController', function(){
-		this.tab=1; //pagina 1 do index tab, vai ser a selecionada
-		
-		var dishes=[
-			{
-			name:'Uthapizza', 
-			image: 'images/uthapizza.png',
-			category: 'mains',
-			label:'Hot',
-			price:'4.99',
-			description: 'A unique combinantion of many things, not sure just waiting to load the page', 
-			comment: 'abc'
-			
-			},
-			{
-			name:'Zucchipakoda', 
-			image: 'images/Zucchipakoda.png',
-			category: 'appetizer',
-			label: '',
-			price:'1.99',
-			description: 'A deep fried combinantion of many things', 
-			comment: 'abc'
-			
-			},
-			{
-			name:'Vadonut', 
-			image: 'images/Vadonut.png',
-			category: 'appetizer',
-			label:'New',
-			price:'1.99',
-			description: 'A quintessense  fried combinantion of many things', 
-			comment: 'abc'
-			
-			},
-			{
-			name:'ElaiCheese Cake', 
-			image: 'images/elaicheesecake.png',
-			category: 'dessert',
-			label:'New',
-			price:'1.99',
-			description: 'A quintessense  fried combinantion of many things', 
-			
-			}
-			
-			
-			];
-		
-		this.dishes = dishes;
-		
-		
-		
-		this.select = function(setTab){
-			this.tab=setTab;
-		
-		
-		if(setTab===2)
-			this.filtText="appetizer"; 
-		else if (setTab===3)
-			this.filtText='mains'; 
-		else if (setTab===4)
-			this.filtText="dessert"; 
-		else 
-			this.filtText="";
-		}
-		
-		this.isSelected =function(checkTab){return (this.tab===checkTab);}	
-		
-	});
-</script>
+	<script src="scripts/app.js"></script>
+	<!-- endbuild -->
 </body>
 
 </html>
