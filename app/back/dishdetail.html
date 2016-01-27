@@ -38,16 +38,16 @@
 			<div class="media">
 				<div class="media-left">
 					<a href="#"> <img class="media-object img-thumbnail"
-						ng-src={{dish.image}} alt="Uthapizza">
+						ng-src={{dishes.image}} alt="Uthapizza">
 					</a>
 				</div>
 				<div class="media-body">
 					<h2 class="media-heading">
-						{{dish.name}} <span class="label label-danger label-xs">
-							{{dish.label}} </span> <span class="badge"> {{dish.price |
+						{{dishes.name}} <span class="label label-danger label-xs">
+							{{dishes.label}} </span> <span class="badge"> {{dishes.price |
 							currency}}</span>
 					</h2>
-					<p>{{dish.description}}</p>
+					<p>{{dishes.description}}</p>
 				</div>
 			</div>
 
@@ -60,7 +60,7 @@
 	            <input class="input-sm" type="text" ng-model="in">
 	        </h4>
 
-	        <blockquote ng-repeat="comment in dish.comments | orderBy:in">
+	        <blockquote ng-repeat="comment in dishes.comments | orderBy:in">
 	            <p>
 	                {{comment.rating}} Stars
 	            </p>
@@ -137,6 +137,8 @@
 	<script src="../bower_components/angular/angular.min.js"></script>
 
 		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers.js"></script>
+		<script src="scripts/services.js"></script>
 
 
 
